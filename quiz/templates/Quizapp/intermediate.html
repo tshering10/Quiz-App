@@ -1,0 +1,197 @@
+{% extends "Quizapp/base.html" %}
+
+{% block title %}Intermediate Python Questions{% endblock title %}
+
+{% block content %}
+<div class="questions mt-5">
+    <h1>Intermediate Python Questions</h1>
+    <form action="" method='POST'>
+        {% csrf_token %}
+        <ol>
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the difference between deep copy and shallow copy in Python?</strong>
+                    <br>
+                    <input type="radio" name='q1' value='Deep copy copies the object, but a shallow copy references the original object.'>
+                    <label>A deep copy copies the object, but a shallow copy references the original object.</label>
+                    <br>
+                    <input type="radio" name='q1' value='Deep copy references the original object, while a shallow copy copies the object.'>
+                    <label>A deep copy references the original object, while a shallow copy copies the object.</label>
+                    <br>
+                    <input type="radio" name='q1' value='Both deep and shallow copies are the same in Python.'>
+                    <label>Both deep and shallow copies are the same in Python.</label>
+                    <br>
+                    <input type="radio" name='q1' value='Deep copy copies both the object and the objects inside it, while a shallow copy only copies the top-level object.'>
+                    <label>A deep copy copies both the object and the objects inside it, while a shallow copy only copies the top-level object.</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What does the `@staticmethod` decorator do in Python?</strong>
+                    <br>
+                    <input type="radio" name='q2' value='Defines a method that belongs to the class, not the instance.'>
+                    <label>Defines a method that belongs to the class, not the instance.</label>
+                    <br>
+                    <input type="radio" name='q2' value='Defines a method that can be called on an instance.'>
+                    <label>Defines a method that can be called on an instance.</label>
+                    <br>
+                    <input type="radio" name='q2' value='Defines a method that doesn’t require a class reference.'>
+                    <label>Defines a method that doesn’t require a class reference.</label>
+                    <br>
+                    <input type="radio" name='q2' value='Defines a method that is only called inside the class.'>
+                    <label>Defines a method that is only called inside the class.</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the output of the following code: `x = [1, 2, 3]; x.append([4, 5])`?</strong>
+                    <br>
+                    <input type="radio" name='q3' value='[1, 2, 3, [4, 5]]'>
+                    <label>[1, 2, 3, [4, 5]]</label>
+                    <br>
+                    <input type="radio" name='q3' value='[1, 2, 3, 4, 5]'>
+                    <label>[1, 2, 3, 4, 5]</label>
+                    <br>
+                    <input type="radio" name='q3' value='[1, 2, 3]'>
+                    <label>[1, 2, 3]</label>
+                    <br>
+                    <input type="radio" name='q3' value='[4, 5]'>
+                    <label>[4, 5]</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following methods can be used to iterate over a list in reverse order?</strong>
+                    <br>
+                    <input type="radio" name='q4' value='list.reverse()'>
+                    <label>list.reverse()</label>
+                    <br>
+                    <input type="radio" name='q4' value='reversed(list)'>
+                    <label>reversed(list)</label>
+                    <br>
+                    <input type="radio" name='q4' value='list.reverse_iterator()'>
+                    <label>list.reverse_iterator()</label>
+                    <br>
+                    <input type="radio" name='q4' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What will be the output of the following code: `x = [1, 2, 3]; x.remove(2)`?</strong>
+                    <br>
+                    <input type="radio" name='q5' value='[1, 2, 3]'>
+                    <label>[1, 2, 3]</label>
+                    <br>
+                    <input type="radio" name='q5' value='[1, 3]'>
+                    <label>[1, 3]</label>
+                    <br>
+                    <input type="radio" name='q5' value='[2, 3]'>
+                    <label>[2, 3]</label>
+                    <br>
+                    <input type="radio" name='q5' value='[1, 2]'>
+                    <label>[1, 2]</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the result of the following operation: `2 == '2'`?</strong>
+                    <br>
+                    <input type="radio" name='q6' value='True'>
+                    <label>True</label>
+                    <br>
+                    <input type="radio" name='q6' value='False'>
+                    <label>False</label>
+                    <br>
+                    <input type="radio" name='q6' value='TypeError'>
+                    <label>TypeError</label>
+                    <br>
+                    <input type="radio" name='q6' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is a lambda function in Python?</strong>
+                    <br>
+                    <input type="radio" name='q7' value='A function that is defined using the `def` keyword.'>
+                    <label>A function that is defined using the `def` keyword.</label>
+                    <br>
+                    <input type="radio" name='q7' value='A function that can take any number of arguments and return a value.'>
+                    <label>A function that can take any number of arguments and return a value.</label>
+                    <br>
+                    <input type="radio" name='q7' value='A function that is defined using the `lambda` keyword, usually for simple operations.'>
+                    <label>A function that is defined using the `lambda` keyword, usually for simple operations.</label>
+                    <br>
+                    <input type="radio" name='q7' value='A function that can only be used inside a loop.'>
+                    <label>A function that can only be used inside a loop.</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following will create a set in Python?</strong>
+                    <br>
+                    <input type="radio" name='q8' value='set([1, 2, 3])'>
+                    <label>set([1, 2, 3])</label>
+                    <br>
+                    <input type="radio" name='q8' value='{1, 2, 3}'>
+                    <label>{1, 2, 3}</label>
+                    <br>
+                    <input type="radio" name='q8' value='[1, 2, 3]'>
+                    <label>[1, 2, 3]</label>
+                    <br>
+                    <input type="radio" name='q8' value='Both A and B'>
+                    <label>Both A and B</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the output of the following code: `len("hello"[1:4])`?</strong>
+                    <br>
+                    <input type="radio" name='q9' value='4'>
+                    <label>4</label>
+                    <br>
+                    <input type="radio" name='q9' value='3'>
+                    <label>3</label>
+                    <br>
+                    <input type="radio" name='q9' value='5'>
+                    <label>5</label>
+                    <br>
+                    <input type="radio" name='q9' value='2'>
+                    <label>2</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following is the correct way to raise an exception in Python?</strong>
+                    <br>
+                    <input type="radio" name='q10' value='raise Exception("An error occurred")'>
+                    <label>raise Exception("An error occurred")</label>
+                    <br>
+                    <input type="radio" name='q10' value='throw Exception("An error occurred")'>
+                    <label>throw Exception("An error occurred")</label>
+                    <br>
+                    <input type="radio" name='q10' value='error Exception("An error occurred")'>
+                    <label>error Exception("An error occurred")</label>
+                    <br>
+                    <input type="radio" name='q10' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+        </ol>
+        
+        <div class="d-flex justify-content-center mb-5">
+            <button type='submit' class='btn btn-primary fs-5'>Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        text-decoration: none;
+        background-color: rgb(238, 226, 226);
+    }
+    
+    </style>
+</head>
+<body>
+
+  <div class="wrapper">
+     <!-- Showing Messages -->
+    {% if messages %}
+    <div class="container">
+      {% for msg in messages %}
+        <div class="alert alert-success" role="alert">
+          {{ msg }}
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mr-3 ml-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">Python Quiz 4U</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+
+            {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'register' %}">Signup</a>
+              </li>
+            {% endif %}
+    
+          </ul> 
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      {% block content %}{% endblock content %}
+    </div>
+
+    <!--Bootstrap JS files -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-6YkQQI9j2c/Z3j+Y3Qd5t7UQw9v65Wfpg5OZC2U7wm7/h9ztcayHb2vgL3yLFo2k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-c5t33-5J2oh5ElcEIb8wM72dJkWg5D5/dEDtH2g/5EjUQ2W5qP7wz1/e9yMwSjd9" crossorigin="anonymous"></script>
+  </div>
+</body>
+</html>

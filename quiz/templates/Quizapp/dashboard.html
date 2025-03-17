@@ -1,0 +1,16 @@
+{% extends "Quizapp/base.html" %}
+{% block title %}Dashboard{% endblock title %}
+
+{% block content %}
+    <h1>Welcome {{ user.username}}</h1>
+    <div class="dashboard-conatiner">
+        <h1>Choose Difficulty:</h1>
+        <ol>
+            <li><a href="{% url "basic_view" %}">Python Basic Questions</a></li>   
+            <li><a href="{% url "inter_view" %}">Python Intermediate Questions</a></li>   
+            <li><a href="{% url "advance_view" %}">Python Advanced Questions</a></li>   
+        </ol>
+    </div>
+    
+{% endblock content %}
+

@@ -1,0 +1,17 @@
+{% extends "Quizapp/base.html" %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div class="home-text">
+    <h3 class='welcome-text mt-5'>
+        <strong>"Welcome to Python Quiz 4U"
+        </strong> <br>Test your Python knowledge, improve your coding skills, and 
+        learn through interactive quizzes. Whether you're just starting out or looking to sharpen your expertise,
+        Python Quiz 4U offers a fun way to challenge yourself. Start playing from now!
+    </h3>
+    <a href="{% url "register" %}" class='btn btn-primary mt-4'>Get Started</a>
+</div>
+    
+<br>
+
+{% endblock content %}  

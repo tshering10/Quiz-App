@@ -1,0 +1,199 @@
+{% extends "Quizapp/base.html" %}
+{% block title %}Basic Python Questions{% endblock title %}
+
+{% block content %}
+<div class="questions mt-5">
+    <h1>Basic Python Questions</h1>
+    <h5>{{result}}</h5>
+
+    <form method='POST'>
+        {% csrf_token %}
+        <ol class='list-inside'>
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following is used to define a function in Python?</strong>
+                    <br>
+                    <input type="radio" name='q1' value='def function_name:'>
+                    <label>def function_name:</label>
+                    <br>
+                    <input type="radio" name='q1' value='function function_name():'>
+                    <label>function function_name():</label>
+                    <br>
+                    <input type="radio" name='q1' value='func function_name():'>
+                    <label>func function_name():</label>
+                    <br>
+                    <input type="radio" name='q1' value='function_name function:'>
+                    <label>function_name function:</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following data types are mutable in Python?</strong>
+                    <br>
+                    <input type="radio" name='q2' value='Tuple'>
+                    <label>Tuple</label>
+                    <br>
+                    <input type="radio" name='q2' value='String'>
+                    <label>String</label>
+                    <br>
+                    <input type="radio" name='q2' value='List'>
+                    <label>List</label>
+                    <br>
+                    <input type="radio" name='q2' value='Integer'>
+                    <label>Integer</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the output of the following code: print(2 ** 3)?</strong>
+                    <br>
+                    <input type="radio" name='q3' value='5'>
+                    <label>5</label>
+                    <br>
+                    <input type="radio" name='q3' value='6'>
+                    <label>6</label>
+                    <br>
+                    <input type="radio" name='q3' value='8'>
+                    <label>8</label>
+                    <br>
+                    <input type="radio" name='q3' value='3'>
+                    <label>3</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which keyword is used to handle exceptions in Python?</strong>
+                    <br>
+                    <input type="radio" name='q4' value='try'>
+                    <label>try</label>
+                    <br>
+                    <input type="radio" name='q4' value='catch'>
+                    <label>catch</label>
+                    <br>
+                    <input type="radio" name='q4' value='except'>
+                    <label>except</label>
+                    <br>
+                    <input type="radio" name='q4' value='finally'>
+                    <label>finally</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which function is used to get the length of a list in Python?</strong>
+                    <br>
+                    <input type="radio" name='q5' value='len()'>
+                    <label>len()</label>
+                    <br>
+                    <input type="radio" name='q5' value='length()'>
+                    <label>length()</label>
+                    <br>
+                    <input type="radio" name='q5' value='count()'>
+                    <label>count()</label>
+                    <br>
+                    <input type="radio" name='q5' value='size()'>
+                    <label>size()</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What does the "self" keyword refer to in a Python class?</strong>
+                    <br>
+                    <input type="radio" name='q6' value='Instance of the class'>
+                    <label>Instance of the class</label>
+                    <br>
+                    <input type="radio" name='q6' value='Method of the class'>
+                    <label>Method of the class</label>
+                    <br>
+                    <input type="radio" name='q6' value='Class itself'>
+                    <label>Class itself</label>
+                    <br>
+                    <input type="radio" name='q6' value='Local variable'>
+                    <label>Local variable</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following is not a valid Python data type?</strong>
+                    <br>
+                    <input type="radio" name='q7' value='list'>
+                    <label>list</label>
+                    <br>
+                    <input type="radio" name='q7' value='tuple'>
+                    <label>tuple</label>
+                    <br>
+                    <input type="radio" name='q7' value='dictionary'>
+                    <label>dictionary</label>
+                    <br>
+                    <input type="radio" name='q7' value='setter'>
+                    <label>setter</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following methods can be used to add an item to the end of a list?</strong>
+                    <br>
+                    <input type="radio" name='q8' value='add()'>
+                    <label>add()</label>
+                    <br>
+                    <input type="radio" name='q8' value='append()'>
+                    <label>append()</label>
+                    <br>
+                    <input type="radio" name='q8' value='insert()'>
+                    <label>insert()</label>
+                    <br>
+                    <input type="radio" name='q8' value='extend()'>
+                    <label>extend()</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the purpose of the "continue" statement in Python?</strong>
+                    <br>
+                    <input type="radio" name='q9' value='Exit the current loop'>
+                    <label>Exit the current loop</label>
+                    <br>
+                    <input type="radio" name='q9' value='Skip the rest of the current iteration'>
+                    <label>Skip the rest of the current iteration</label>
+                    <br>
+                    <input type="radio" name='q9' value='Pause the execution'>
+                    <label>Pause the execution</label>
+                    <br>
+                    <input type="radio" name='q9' value='Exit the program'>
+                    <label>Exit the program</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following is used to import a module in Python?</strong>
+                    <br>
+                    <input type="radio" name='q10' value='import module_name'>
+                    <label>import module_name</label>
+                    <br>
+                    <input type="radio" name='q10' value='use module_name'>
+                    <label>use module_name</label>
+                    <br>
+                    <input type="radio" name='q10' value='include module_name'>
+                    <label>include module_name</label>
+                    <br>
+                    <input type="radio" name='q10' value='load module_name'>
+                    <label>load module_name</label>
+                </div>
+            </li>
+        </ol>
+
+        <div class="d-flex justify-content-center mb-5">
+            <button type='submit' class='btn btn-primary fs-5'>Submit</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

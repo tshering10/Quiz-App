@@ -1,0 +1,197 @@
+{% extends "Quizapp/base.html" %}
+
+{% block title %}Advanced Python Questions{% endblock title %}
+
+{% block content %}
+<div class="questions mt-5">
+    <h1>Advanced Python Questions</h1>
+    <form action="" method='POST'>
+        {% csrf_token %}
+        <ol>
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the purpose of the `@property` decorator in Python?</strong>
+                    <br>
+                    <input type="radio" name='q1' value='It allows a method to be accessed like an attribute, without explicitly calling it.'>
+                    <label>It allows a method to be accessed like an attribute, without explicitly calling it.</label>
+                    <br>
+                    <input type="radio" name='q1' value='It makes a method accessible only within the class.'>
+                    <label>It makes a method accessible only within the class.</label>
+                    <br>
+                    <input type="radio" name='q1' value='It defines a static method in a class.'>
+                    <label>It defines a static method in a class.</label>
+                    <br>
+                    <input type="radio" name='q1' value='It defines an abstract method in a class.'>
+                    <label>It defines an abstract method in a class.</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What will the following code print? `for i in range(3): print(i, end=' ')`?</strong>
+                    <br>
+                    <input type="radio" name='q2' value='0 1 2'>
+                    <label>0 1 2</label>
+                    <br>
+                    <input type="radio" name='q2' value='1 2 3'>
+                    <label>1 2 3</label>
+                    <br>
+                    <input type="radio" name='q2' value='0 1 2 3'>
+                    <label>0 1 2 3</label>
+                    <br>
+                    <input type="radio" name='q2' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>Which of the following is the correct syntax to define a generator function in Python?</strong>
+                    <br>
+                    <input type="radio" name='q3' value='def gen(): yield value'>
+                    <label>def gen(): yield value</label>
+                    <br>
+                    <input type="radio" name='q3' value='gen() => yield value'>
+                    <label>gen() => yield value</label>
+                    <br>
+                    <input type="radio" name='q3' value='function gen() { yield value }'>
+                    <label>function gen() { yield value }</label>
+                    <br>
+                    <input type="radio" name='q3' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the output of the following code? `x = [1, 2, 3]; print(x * 2)`</strong>
+                    <br>
+                    <input type="radio" name='q4' value='[1, 2, 3, 1, 2, 3]'>
+                    <label>[1, 2, 3, 1, 2, 3]</label>
+                    <br>
+                    <input type="radio" name='q4' value='[2, 4, 6]'>
+                    <label>[2, 4, 6]</label>
+                    <br>
+                    <input type="radio" name='q4' value='[1, 2, 3, 2, 4, 6]'>
+                    <label>[1, 2, 3, 2, 4, 6]</label>
+                    <br>
+                    <input type="radio" name='q4' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the purpose of `__new__` method in Python?</strong>
+                    <br>
+                    <input type="radio" name='q5' value='It is called when a new object is created.'>
+                    <label>It is called when a new object is created.</label>
+                    <br>
+                    <input type="radio" name='q5' value='It initializes the object.'>
+                    <label>It initializes the object.</label>
+                    <br>
+                    <input type="radio" name='q5' value='It is called when the object is deleted.'>
+                    <label>It is called when the object is deleted.</label>
+                    <br>
+                    <input type="radio" name='q5' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What does `*args` and `**kwargs` do in function definitions?</strong>
+                    <br>
+                    <input type="radio" name='q6' value='*args is for variable-length positional arguments, and **kwargs is for variable-length keyword arguments.'>
+                    <label>*args is for variable-length positional arguments, and **kwargs is for variable-length keyword arguments.</label>
+                    <br>
+                    <input type="radio" name='q6' value='*args is for keyword arguments, and **kwargs is for positional arguments.'>
+                    <label>*args is for keyword arguments, and **kwargs is for positional arguments.</label>
+                    <br>
+                    <input type="radio" name='q6' value='*args and **kwargs are both used for positional arguments only.'>
+                    <label>*args and **kwargs are both used for positional arguments only.</label>
+                    <br>
+                    <input type="radio" name='q6' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the difference between `staticmethod` and `classmethod`?</strong>
+                    <br>
+                    <input type="radio" name='q7' value='A `staticmethod` does not require a reference to the instance or class, while a `classmethod` requires a reference to the class.'>
+                    <label>A `staticmethod` does not require a reference to the instance or class, while a `classmethod` requires a reference to the class.</label>
+                    <br>
+                    <input type="radio" name='q7' value='A `staticmethod` requires a reference to the class, while a `classmethod` does not.'>
+                    <label>A `staticmethod` requires a reference to the class, while a `classmethod` does not.</label>
+                    <br>
+                    <input type="radio" name='q7' value='Both are the same in functionality.'>
+                    <label>Both are the same in functionality.</label>
+                    <br>
+                    <input type="radio" name='q7' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is a metaclass in Python?</strong>
+                    <br>
+                    <input type="radio" name='q8' value='A class that defines the behavior of other classes.'>
+                    <label>A class that defines the behavior of other classes.</label>
+                    <br>
+                    <input type="radio" name='q8' value='A class that is used to create other classes.'>
+                    <label>A class that is used to create other classes.</label>
+                    <br>
+                    <input type="radio" name='q8' value='A class that is used to define class methods.'>
+                    <label>A class that is used to define class methods.</label>
+                    <br>
+                    <input type="radio" name='q8' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the purpose of the `with` statement in Python?</strong>
+                    <br>
+                    <input type="radio" name='q9' value='It is used to open files in a clean and efficient manner.'>
+                    <label>It is used to open files in a clean and efficient manner.</label>
+                    <br>
+                    <input type="radio" name='q9' value='It is used to catch exceptions in a block of code.'>
+                    <label>It is used to catch exceptions in a block of code.</label>
+                    <br>
+                    <input type="radio" name='q9' value='It is used to define a function in Python.'>
+                    <label>It is used to define a function in Python.</label>
+                    <br>
+                    <input type="radio" name='q9' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+
+            <li class="question-item">
+                <div class="question-box">
+                    <strong>What is the output of the following code: `a = [1, 2, 3]; b = a; b[0] = 10; print(a)`?</strong>
+                    <br>
+                    <input type="radio" name='q10' value='[10, 2, 3]'>
+                    <label>[10, 2, 3]</label>
+                    <br>
+                    <input type="radio" name='q10' value='[1, 2, 3]'>
+                    <label>[1, 2, 3]</label>
+                    <br>
+                    <input type="radio" name='q10' value='[10, 2, 3], [10, 2, 3]'>
+                    <label>[10, 2, 3], [10, 2, 3]</label>
+                    <br>
+                    <input type="radio" name='q10' value='None of the above'>
+                    <label>None of the above</label>
+                </div>
+            </li>
+        </ol>
+        
+        <div class="d-flex justify-content-center mb-5">
+            <button type='submit' class='btn btn-primary fs-5'>Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

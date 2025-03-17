@@ -1,0 +1,44 @@
+
+h1 {
+    text-align: center;
+}
+.home-text {
+    padding: 5px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center; 
+}
+
+.welcome-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+}
+
+.welcome-text strong {
+    color: #4f647a;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.home-text h3 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.question-item {
+    padding: 10px;
+}
+
+.question-box {
+    background-color: rgb(206, 187, 187);
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+
